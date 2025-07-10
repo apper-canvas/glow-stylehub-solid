@@ -7,6 +7,7 @@ import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
+import ReviewSection from "@/components/molecules/ReviewSection";
 import { productService } from "@/services/api/productService";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
@@ -301,8 +302,11 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-          </div>
+</div>
         </div>
+
+        {/* Reviews Section */}
+        <ReviewSection productId={product.Id} />
       </div>
     </div>
   );

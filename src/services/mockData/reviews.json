@@ -1,0 +1,472 @@
+[
+  {
+    "Id": 1,
+    "productId": 1,
+    "userName": "Sarah Johnson",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Absolutely love this t-shirt! The fabric is so soft and comfortable. Perfect fit and the quality is amazing. Will definitely buy more colors.",
+    "date": "2024-01-15T10:30:00Z",
+    "helpfulVotes": 12
+  },
+  {
+    "Id": 2,
+    "productId": 1,
+    "userName": "Mike Chen",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Great quality t-shirt. Runs a bit large so consider sizing down. The material feels premium and washes well.",
+    "date": "2024-01-10T14:20:00Z",
+    "helpfulVotes": 8
+  },
+  {
+    "Id": 3,
+    "productId": 1,
+    "userName": "Emma Wilson",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Perfect everyday t-shirt! Love the relaxed fit and the colors are vibrant. Highly recommend!",
+    "date": "2024-01-08T09:15:00Z",
+    "helpfulVotes": 6
+  },
+  {
+    "Id": 4,
+    "productId": 2,
+    "userName": "Jessica Davis",
+    "userAvatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "These jeans are incredible! Perfect fit, great stretch, and they hold their shape after washing. Worth every penny.",
+    "date": "2024-01-12T16:45:00Z",
+    "helpfulVotes": 15
+  },
+  {
+    "Id": 5,
+    "productId": 2,
+    "userName": "Alex Thompson",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Good quality jeans with nice stretch. The color is exactly as shown. Delivery was fast too.",
+    "date": "2024-01-07T11:30:00Z",
+    "helpfulVotes": 9
+  },
+  {
+    "Id": 6,
+    "productId": 3,
+    "userName": "Lily Anderson",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Beautiful dress! The floral print is gorgeous and the fabric is lightweight and breathable. Perfect for summer.",
+    "date": "2024-01-14T13:20:00Z",
+    "helpfulVotes": 11
+  },
+  {
+    "Id": 7,
+    "productId": 3,
+    "userName": "Rachel Green",
+    "userAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Love the design and print quality. The dress is flowy and comfortable. Sizing is accurate.",
+    "date": "2024-01-09T15:10:00Z",
+    "helpfulVotes": 7
+  },
+  {
+    "Id": 8,
+    "productId": 4,
+    "userName": "David Park",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Excellent blazer for professional wear. The tailoring is perfect and the material feels premium. Great investment piece.",
+    "date": "2024-01-11T10:00:00Z",
+    "helpfulVotes": 13
+  },
+  {
+    "Id": 9,
+    "productId": 4,
+    "userName": "James Wilson",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Well-made blazer with nice fit. The fabric quality is good and it looks professional. Happy with the purchase.",
+    "date": "2024-01-06T14:30:00Z",
+    "helpfulVotes": 8
+  },
+  {
+    "Id": 10,
+    "productId": 5,
+    "userName": "Tom Rodriguez",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Amazing sneakers! Super comfortable for daily wear and the cushioning is excellent. Highly recommend for anyone looking for comfort.",
+    "date": "2024-01-13T12:15:00Z",
+    "helpfulVotes": 18
+  },
+  {
+    "Id": 11,
+    "productId": 5,
+    "userName": "Kevin Lee",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Great sneakers for the price. Comfortable fit and good build quality. The design is stylish too.",
+    "date": "2024-01-05T09:45:00Z",
+    "helpfulVotes": 10
+  },
+  {
+    "Id": 12,
+    "productId": 6,
+    "userName": "Maria Garcia",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "My daughter absolutely loves this dress! The colors are vibrant and the fabric is soft. Perfect for playtime.",
+    "date": "2024-01-10T16:20:00Z",
+    "helpfulVotes": 14
+  },
+  {
+    "Id": 13,
+    "productId": 6,
+    "userName": "Jennifer Brown",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Beautiful and colorful dress for kids. Good quality material and the fit is perfect for my 5-year-old.",
+    "date": "2024-01-04T11:10:00Z",
+    "helpfulVotes": 6
+  },
+  {
+    "Id": 14,
+    "productId": 7,
+    "userName": "Sophia Miller",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Fantastic lipstick set! The colors are beautiful and long-lasting. Great pigmentation and smooth application.",
+    "date": "2024-01-12T14:55:00Z",
+    "helpfulVotes": 16
+  },
+  {
+    "Id": 15,
+    "productId": 7,
+    "userName": "Isabella Taylor",
+    "userAvatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Love these lipsticks! They stay on for hours and the shades are perfect for any occasion. Highly recommend!",
+    "date": "2024-01-08T10:30:00Z",
+    "helpfulVotes": 12
+  },
+  {
+    "Id": 16,
+    "productId": 8,
+    "userName": "Lisa Wang",
+    "userAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Nice decorative cushion that adds a great pop of color to my living room. The fabric feels good quality.",
+    "date": "2024-01-09T13:40:00Z",
+    "helpfulVotes": 7
+  },
+  {
+    "Id": 17,
+    "productId": 8,
+    "userName": "Amanda Clark",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Pretty cushion with nice colors. Comfortable and well-made. Good value for the price.",
+    "date": "2024-01-03T15:25:00Z",
+    "helpfulVotes": 5
+  },
+  {
+    "Id": 18,
+    "productId": 9,
+    "userName": "Ryan Johnson",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Excellent earbuds! Great sound quality and noise cancellation works perfectly. Battery life is impressive too.",
+    "date": "2024-01-11T17:10:00Z",
+    "helpfulVotes": 20
+  },
+  {
+    "Id": 19,
+    "productId": 9,
+    "userName": "Mark Davis",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Good quality wireless earbuds. Sound is clear and they stay in place during workouts. Solid purchase.",
+    "date": "2024-01-06T12:50:00Z",
+    "helpfulVotes": 11
+  },
+  {
+    "Id": 20,
+    "productId": 10,
+    "userName": "Nicole White",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Absolutely gorgeous handbag! The leather quality is amazing and it has so much space. Perfect for everyday use.",
+    "date": "2024-01-13T11:30:00Z",
+    "helpfulVotes": 22
+  },
+  {
+    "Id": 21,
+    "productId": 10,
+    "userName": "Chloe Anderson",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Beautiful leather handbag with excellent craftsmanship. The compartments are well-designed and it's very stylish.",
+    "date": "2024-01-07T16:15:00Z",
+    "helpfulVotes": 17
+  },
+  {
+    "Id": 22,
+    "productId": 1,
+    "userName": "Daniel Kim",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 3,
+    "comment": "Decent t-shirt but the sizing is inconsistent. The material is good but I expected better quality for the price.",
+    "date": "2024-01-02T08:20:00Z",
+    "helpfulVotes": 4
+  },
+  {
+    "Id": 23,
+    "productId": 2,
+    "userName": "Olivia Martinez",
+    "userAvatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Perfect jeans! They fit like a glove and the material is high quality. The stretch is just right - not too much, not too little.",
+    "date": "2024-01-01T19:45:00Z",
+    "helpfulVotes": 13
+  },
+  {
+    "Id": 24,
+    "productId": 3,
+    "userName": "Grace Thompson",
+    "userAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Lovely dress with beautiful prints. The quality is good and it's very comfortable to wear all day.",
+    "date": "2023-12-30T14:30:00Z",
+    "helpfulVotes": 8
+  },
+  {
+    "Id": 25,
+    "productId": 4,
+    "userName": "Robert Wilson",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Outstanding blazer! The fit is perfect and the quality exceeds expectations. Great for business meetings and formal events.",
+    "date": "2023-12-28T10:15:00Z",
+    "helpfulVotes": 15
+  },
+  {
+    "Id": 26,
+    "productId": 5,
+    "userName": "Chris Lee",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Comfortable sneakers with good support. Perfect for long walks and daily activities. Would recommend.",
+    "date": "2023-12-27T13:20:00Z",
+    "helpfulVotes": 9
+  },
+  {
+    "Id": 27,
+    "productId": 6,
+    "userName": "Catherine Brown",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "My kids love this dress! The colors are so bright and cheerful. Great quality and it washes well too.",
+    "date": "2023-12-25T16:40:00Z",
+    "helpfulVotes": 11
+  },
+  {
+    "Id": 28,
+    "productId": 7,
+    "userName": "Megan Taylor",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Great lipstick set with nice variety of colors. The formula is smooth and the staying power is good.",
+    "date": "2023-12-24T11:55:00Z",
+    "helpfulVotes": 7
+  },
+  {
+    "Id": 29,
+    "productId": 8,
+    "userName": "Anna Garcia",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 3,
+    "comment": "The cushion is okay but not as plush as I expected. The colors are nice though and it matches my decor.",
+    "date": "2023-12-22T09:30:00Z",
+    "helpfulVotes": 3
+  },
+  {
+    "Id": 30,
+    "productId": 9,
+    "userName": "Steven Clark",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Amazing sound quality and comfort! These earbuds are perfect for music and calls. The noise cancellation is top-notch.",
+    "date": "2023-12-20T15:10:00Z",
+    "helpfulVotes": 19
+  },
+  {
+    "Id": 31,
+    "productId": 10,
+    "userName": "Hannah White",
+    "userAvatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Beautiful handbag with great attention to detail. The leather is soft and the size is perfect for everyday use.",
+    "date": "2023-12-18T12:25:00Z",
+    "helpfulVotes": 10
+  },
+  {
+    "Id": 32,
+    "productId": 1,
+    "userName": "Lucas Rodriguez",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Good basic t-shirt. Comfortable fit and the fabric holds up well after multiple washes.",
+    "date": "2023-12-15T18:35:00Z",
+    "helpfulVotes": 6
+  },
+  {
+    "Id": 33,
+    "productId": 2,
+    "userName": "Victoria Lee",
+    "userAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=40&h=40&fit=crop&crop=face",
+    "rating": 3,
+    "comment": "The jeans are okay but they stretched out more than expected after a few wears. The fit was good initially.",
+    "date": "2023-12-14T14:50:00Z",
+    "helpfulVotes": 5
+  },
+  {
+    "Id": 34,
+    "productId": 3,
+    "userName": "Zoe Davis",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Stunning dress! The floral pattern is beautiful and the fabric feels amazing. Perfect for spring and summer.",
+    "date": "2023-12-12T10:20:00Z",
+    "helpfulVotes": 14
+  },
+  {
+    "Id": 35,
+    "productId": 4,
+    "userName": "Nathan Park",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Well-tailored blazer that looks professional. The material is good quality and it fits true to size.",
+    "date": "2023-12-10T16:15:00Z",
+    "helpfulVotes": 8
+  },
+  {
+    "Id": 36,
+    "productId": 5,
+    "userName": "Eric Johnson",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Fantastic sneakers! Great for running and gym workouts. The cushioning is excellent and they're very durable.",
+    "date": "2023-12-08T13:40:00Z",
+    "helpfulVotes": 16
+  },
+  {
+    "Id": 37,
+    "productId": 6,
+    "userName": "Samantha Miller",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Cute dress for little ones. My daughter loves wearing it and the quality seems good for the price.",
+    "date": "2023-12-06T11:25:00Z",
+    "helpfulVotes": 7
+  },
+  {
+    "Id": 38,
+    "productId": 7,
+    "userName": "Ashley Wilson",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Love this lipstick collection! The colors are vibrant and they last for hours without fading. Great value!",
+    "date": "2023-12-04T17:30:00Z",
+    "helpfulVotes": 13
+  },
+  {
+    "Id": 39,
+    "productId": 8,
+    "userName": "Michelle Thompson",
+    "userAvatar": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Nice decorative pillow that adds color to my room. The fabric is soft and it's well-made.",
+    "date": "2023-12-02T09:45:00Z",
+    "helpfulVotes": 6
+  },
+  {
+    "Id": 40,
+    "productId": 9,
+    "userName": "Brandon Lee",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Good wireless earbuds for the price. Sound quality is decent and they're comfortable for long use.",
+    "date": "2023-11-30T14:20:00Z",
+    "helpfulVotes": 9
+  },
+  {
+    "Id": 41,
+    "productId": 10,
+    "userName": "Taylor Brown",
+    "userAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Exceptional handbag! The craftsmanship is outstanding and it's both stylish and functional. Worth every penny.",
+    "date": "2023-11-28T12:10:00Z",
+    "helpfulVotes": 18
+  },
+  {
+    "Id": 42,
+    "productId": 1,
+    "userName": "Jordan Garcia",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Solid t-shirt with good quality fabric. Comfortable and fits well. Good value for money.",
+    "date": "2023-11-26T15:55:00Z",
+    "helpfulVotes": 7
+  },
+  {
+    "Id": 43,
+    "productId": 2,
+    "userName": "Brooke Martinez",
+    "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Perfect fitting jeans! They're comfortable, stylish, and maintain their shape well. Highly recommend!",
+    "date": "2023-11-24T10:30:00Z",
+    "helpfulVotes": 12
+  },
+  {
+    "Id": 44,
+    "productId": 3,
+    "userName": "Madison Clark",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Beautiful dress with lovely patterns. The fit is good and it's perfect for casual occasions.",
+    "date": "2023-11-22T13:15:00Z",
+    "helpfulVotes": 8
+  },
+  {
+    "Id": 45,
+    "productId": 4,
+    "userName": "Austin Rodriguez",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Excellent blazer for professional settings. The fit is perfect and the quality is impressive. Great investment!",
+    "date": "2023-11-20T16:40:00Z",
+    "helpfulVotes": 14
+  },
+  {
+    "Id": 46,
+    "productId": 5,
+    "userName": "Tyler Wilson",
+    "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+    "rating": 4,
+    "comment": "Great sneakers for everyday wear. Comfortable and supportive. Good quality for the price point.",
+    "date": "2023-11-18T11:50:00Z",
+    "helpfulVotes": 10
+  },
+  {
+    "Id": 47,
+    "productId": 6,
+    "userName": "Kimberly Davis",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face",
+    "rating": 5,
+    "comment": "Adorable dress for kids! The colors are vibrant and my daughter absolutely loves it. Great quality material.",
+    "date": "2023-11-16T14:25:00Z",
+    "helpfulVotes": 9
+  }
+]
