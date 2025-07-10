@@ -55,8 +55,39 @@ export const productService = {
 
     if (filters.rating) {
       filtered = filtered.filter(p => p.rating >= filters.rating);
-    }
+}
 
     return filtered.map(p => ({ ...p }));
+  },
+
+  async getSimilarProducts(id) {
+    await delay(250);
+    const currentProduct = productsData.find(p => p.Id === parseInt(id));
+    if (!currentProduct) {
+      return [];
+    }
+
+    // Find products in the same category, excluding current product
+    let similar = productsData.filter(p => 
+      p.Id !== parseInt(id) && 
+      p.category === currentProduct.category
+    );
+
+    // If we have fewer than 4 products in same category, add products from same brand
+    if (similar.length < 4) {
+      const brandProducts = productsData.filter(p => 
+        p.Id !== parseInt(id) && 
+        p.brand === currentProduct.brand &&
+        !similar.find(sp => sp.Id === p.Id)
+      );
+      similar = [...similar, ...brandProducts];
+    }
+
+    // Sort by rating and limit to 4 products
+    similar = similar
+      .sort((a, b) => b.rating - a.rating)
+      .slice(0, 4);
+
+    return similar.map(p => ({ ...p }));
   }
 };

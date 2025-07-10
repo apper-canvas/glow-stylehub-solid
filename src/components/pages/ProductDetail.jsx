@@ -8,10 +8,10 @@ import Badge from "@/components/atoms/Badge";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import ReviewSection from "@/components/molecules/ReviewSection";
+import RelatedProducts from "@/components/molecules/RelatedProducts";
 import { productService } from "@/services/api/productService";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
-
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -304,9 +304,11 @@ const ProductDetail = () => {
             </div>
 </div>
         </div>
-
-        {/* Reviews Section */}
+{/* Reviews Section */}
         <ReviewSection productId={product.Id} />
+
+        {/* Related Products Section */}
+        <RelatedProducts productId={product.Id} />
       </div>
     </div>
   );
