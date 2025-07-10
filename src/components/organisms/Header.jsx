@@ -7,8 +7,7 @@ import Button from "@/components/atoms/Button";
 import SearchBar from "@/components/molecules/SearchBar";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
-import { AuthContext } from "../../../App";
-
+import { AuthContext } from "../../App.jsx";
 const Header = () => {
   const navigate = useNavigate();
   const { getCartCount } = useCart();
