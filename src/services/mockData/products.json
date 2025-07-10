@@ -1,0 +1,192 @@
+[
+  {
+    "Id": 1,
+    "name": "Casual Cotton T-Shirt",
+    "brand": "StyleHub",
+    "price": 1299,
+    "discountPrice": 899,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "White", "Navy", "Gray"],
+    "category": "Women",
+    "rating": 4.2,
+    "reviewCount": 128,
+    "inStock": true,
+    "description": "Comfortable cotton t-shirt perfect for everyday wear. Made from premium quality fabric with a relaxed fit."
+  },
+  {
+    "Id": 2,
+    "name": "Denim Skinny Jeans",
+    "brand": "TrendWear",
+    "price": 2499,
+    "discountPrice": 1899,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1475180098004-ca77a66827be?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["28", "30", "32", "34", "36"],
+    "colors": ["Blue", "Black", "Dark Blue"],
+    "category": "Women",
+    "rating": 4.5,
+    "reviewCount": 256,
+    "inStock": true,
+    "description": "Stylish skinny jeans with perfect fit. Made from stretchable denim fabric for maximum comfort."
+  },
+  {
+    "Id": 3,
+    "name": "Floral Print Dress",
+    "brand": "FashionForward",
+    "price": 3299,
+    "discountPrice": 2199,
+    "images": [
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Pink", "Blue", "Yellow"],
+    "category": "Women",
+    "rating": 4.7,
+    "reviewCount": 89,
+    "inStock": true,
+    "description": "Beautiful floral print dress perfect for summer occasions. Lightweight and breathable fabric."
+  },
+  {
+    "Id": 4,
+    "name": "Formal Blazer",
+    "brand": "ClassicWear",
+    "price": 4999,
+    "discountPrice": 3499,
+    "images": [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "Navy", "Gray", "Brown"],
+    "category": "Men",
+    "rating": 4.4,
+    "reviewCount": 174,
+    "inStock": true,
+    "description": "Professional blazer perfect for office wear. Tailored fit with premium quality fabric."
+  },
+  {
+    "Id": 5,
+    "name": "Sneakers",
+    "brand": "SportStyle",
+    "price": 3999,
+    "discountPrice": 2799,
+    "images": [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["6", "7", "8", "9", "10", "11"],
+    "colors": ["White", "Black", "Blue", "Red"],
+    "category": "Men",
+    "rating": 4.3,
+    "reviewCount": 312,
+    "inStock": true,
+    "description": "Comfortable and stylish sneakers perfect for daily wear. Cushioned sole for maximum comfort."
+  },
+  {
+    "Id": 6,
+    "name": "Kids Rainbow Dress",
+    "brand": "KidsJoy",
+    "price": 1999,
+    "discountPrice": 1299,
+    "images": [
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["2-3Y", "4-5Y", "6-7Y", "8-9Y"],
+    "colors": ["Rainbow", "Pink", "Purple"],
+    "category": "Kids",
+    "rating": 4.6,
+    "reviewCount": 67,
+    "inStock": true,
+    "description": "Colorful and fun dress for kids. Soft fabric and comfortable fit for active children."
+  },
+  {
+    "Id": 7,
+    "name": "Lipstick Set",
+    "brand": "GlamBeauty",
+    "price": 1799,
+    "discountPrice": 1199,
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["Standard"],
+    "colors": ["Red", "Pink", "Brown", "Coral"],
+    "category": "Beauty",
+    "rating": 4.8,
+    "reviewCount": 203,
+    "inStock": true,
+    "description": "Premium lipstick set with long-lasting formula. Includes 4 beautiful shades for any occasion."
+  },
+  {
+    "Id": 8,
+    "name": "Decorative Cushion",
+    "brand": "HomeDecor",
+    "price": 899,
+    "discountPrice": 599,
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["16x16", "18x18", "20x20"],
+    "colors": ["Beige", "Blue", "Green", "Yellow"],
+    "category": "Home & Living",
+    "rating": 4.1,
+    "reviewCount": 45,
+    "inStock": true,
+    "description": "Soft and comfortable decorative cushion to enhance your home decor. Premium quality fabric."
+  },
+  {
+    "Id": 9,
+    "name": "Wireless Earbuds",
+    "brand": "TechStyle",
+    "price": 5999,
+    "discountPrice": 3999,
+    "images": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["One Size"],
+    "colors": ["Black", "White", "Blue"],
+    "category": "Electronics",
+    "rating": 4.5,
+    "reviewCount": 189,
+    "inStock": true,
+    "description": "Premium wireless earbuds with noise cancellation. Long battery life and crystal clear sound."
+  },
+  {
+    "Id": 10,
+    "name": "Leather Handbag",
+    "brand": "LuxeStyle",
+    "price": 6999,
+    "discountPrice": 4999,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop"
+    ],
+    "sizes": ["Small", "Medium", "Large"],
+    "colors": ["Black", "Brown", "Tan", "Red"],
+    "category": "Women",
+    "rating": 4.9,
+    "reviewCount": 134,
+    "inStock": true,
+    "description": "Premium leather handbag with elegant design. Spacious interior with multiple compartments."
+  }
+]

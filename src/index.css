@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-50 text-secondary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded font-medium hover:bg-primary/90 transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply border border-secondary text-secondary px-6 py-2 rounded font-medium hover:bg-secondary hover:text-white transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
+
+/* Custom toast styling */
+.Toastify__toast-container {
+  @apply top-4 right-4 z-[9999];
+}
+
+.Toastify__toast {
+  @apply bg-white border border-gray-200 shadow-lg rounded-lg p-4 text-secondary font-body;
+  min-height: auto;
+}
+
+.Toastify__toast--success {
+  @apply border-success/20 bg-success/5;
+}
+
+.Toastify__toast--error {
+  @apply border-error/20 bg-error/5;
+}
+
+.Toastify__toast--warning {
+  @apply border-warning/20 bg-warning/5;
+}
+
+.Toastify__toast--info {
+  @apply border-info/20 bg-info/5;
+}
+
+.Toastify__progress-bar {
+  @apply bg-primary;
+}
+
+.Toastify__close-button {
+  @apply text-secondary/60 hover:text-secondary;
+}
