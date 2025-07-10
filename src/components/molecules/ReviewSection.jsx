@@ -69,7 +69,7 @@ const ReviewSection = ({ productId }) => {
     }
 
     try {
-      await reviewService.create({
+await reviewService.create({
         ...newReview,
         productId: parseInt(productId),
         userAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"

@@ -19,7 +19,7 @@ const Home = () => {
     loadData();
   }, []);
 
-  const loadData = async () => {
+const loadData = async () => {
     try {
       setLoading(true);
       setError("");
@@ -29,8 +29,22 @@ const Home = () => {
         categoryService.getAll()
       ]);
       
-      setProducts(productsData.slice(0, 8)); // Show first 8 products
-      setCategories(categoriesData);
+      // Transform product data to match UI expectations
+      const transformedProducts = productsData.map(p => ({
+        ...p,
+        name: p.Name || p.name,
+        discountPrice: p.discount_price || p.discountPrice,
+        reviewCount: p.review_count || p.reviewCount
+      }));
+      
+      // Transform category data to match UI expectations  
+      const transformedCategories = categoriesData.map(c => ({
+        ...c,
+        name: c.Name || c.name
+      }));
+      
+      setProducts(transformedProducts.slice(0, 8)); // Show first 8 products
+      setCategories(transformedCategories);
     } catch (err) {
       setError(err.message);
     } finally {

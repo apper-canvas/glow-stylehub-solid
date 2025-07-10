@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import SearchBar from "@/components/molecules/SearchBar";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
+import { AuthContext } from "../../../App";
 
 const Header = () => {
   const navigate = useNavigate();
   const { getCartCount } = useCart();
   const { wishlistItems } = useWishlist();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Get authentication state and methods
+  const { user, isAuthenticated } = useSelector((state) => state.user);
+  const { logout } = useContext(AuthContext);
 
   const categories = [
     { name: "Women", path: "/products/women" },
@@ -27,6 +33,10 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    await logout();
   };
 
   return (
@@ -50,7 +60,7 @@ const Header = () => {
               <SearchBar onSearch={handleSearch} />
             </div>
 
-            {/* Right Icons */}
+{/* Right Icons */}
             <div className="flex items-center space-x-4">
               {/* Mobile Menu Button */}
               <Button
@@ -61,6 +71,24 @@ const Header = () => {
               >
                 <ApperIcon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
               </Button>
+
+              {/* User greeting and logout - only show when authenticated */}
+              {isAuthenticated && user && (
+                <div className="hidden md:flex items-center space-x-3">
+                  <span className="text-sm text-gray-600">
+                    Hello, {user.firstName || user.name || 'User'}
+                  </span>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleLogout}
+                    className="text-gray-600 hover:text-primary"
+                  >
+                    <ApperIcon name="LogOut" size={20} className="mr-1" />
+                    Logout
+                  </Button>
+                </div>
+              )}
 
               {/* Wishlist */}
               <Link to="/wishlist" className="relative">
@@ -112,9 +140,29 @@ const Header = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="px-4 py-4 space-y-4">
+<div className="px-4 py-4 space-y-4">
             {/* Mobile Search */}
             <SearchBar onSearch={handleSearch} />
+            
+            {/* Mobile user info and logout */}
+            {isAuthenticated && user && (
+              <div className="border-b border-gray-200 pb-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">
+                    Hello, {user.firstName || user.name || 'User'}
+                  </span>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleLogout}
+                    className="text-gray-600 hover:text-primary"
+                  >
+                    <ApperIcon name="LogOut" size={16} className="mr-1" />
+                    Logout
+                  </Button>
+                </div>
+              </div>
+            )}
             
             {/* Mobile Navigation */}
             <div className="space-y-2">

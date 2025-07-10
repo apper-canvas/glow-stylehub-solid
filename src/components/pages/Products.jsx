@@ -71,10 +71,10 @@ const Products = () => {
       filtered = filtered.filter(p => filters.brand.includes(p.brand));
     }
 
-    if (filters.priceRange) {
+if (filters.priceRange) {
       filtered = filtered.filter(p => 
-        p.discountPrice >= filters.priceRange.min && 
-        p.discountPrice <= filters.priceRange.max
+        (p.discountPrice || p.discount_price) >= filters.priceRange.min && 
+        (p.discountPrice || p.discount_price) <= filters.priceRange.max
       );
     }
 
@@ -84,11 +84,11 @@ const Products = () => {
 
     // Apply sorting
     switch (sortBy) {
-      case "price-low":
-        filtered.sort((a, b) => a.discountPrice - b.discountPrice);
+case "price-low":
+        filtered.sort((a, b) => (a.discountPrice || a.discount_price) - (b.discountPrice || b.discount_price));
         break;
       case "price-high":
-        filtered.sort((a, b) => b.discountPrice - a.discountPrice);
+        filtered.sort((a, b) => (b.discountPrice || b.discount_price) - (a.discountPrice || a.discount_price));
         break;
       case "rating":
         filtered.sort((a, b) => b.rating - a.rating);

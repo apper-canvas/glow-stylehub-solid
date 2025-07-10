@@ -14,13 +14,22 @@ const RelatedProducts = ({ productId }) => {
     loadRelatedProducts();
   }, [productId]);
 
-  const loadRelatedProducts = async () => {
+const loadRelatedProducts = async () => {
     try {
       setLoading(true);
       setError("");
       
       const data = await productService.getSimilarProducts(productId);
-      setRelatedProducts(data);
+      
+      // Transform data to match UI expectations
+      const transformedData = data.map(p => ({
+        ...p,
+        name: p.Name || p.name,
+        discountPrice: p.discount_price || p.discountPrice,
+        reviewCount: p.review_count || p.reviewCount
+      }));
+      
+      setRelatedProducts(transformedData);
     } catch (err) {
       setError(err.message);
     } finally {

@@ -35,10 +35,10 @@ const ProductDetail = () => {
       setLoading(true);
       setError("");
       
-      const data = await productService.getById(id);
+const data = await productService.getById(id);
       setProduct(data);
-      setSelectedSize(data.sizes[0]);
-      setSelectedColor(data.colors[0]);
+      setSelectedSize(data.sizes?.[0] || "");
+      setSelectedColor(data.colors?.[0] || "");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -85,10 +85,9 @@ const ProductDetail = () => {
     return <Error message="Product not found" showRetry={false} />;
   }
 
-  const discountPercentage = Math.round(
+const discountPercentage = Math.round(
     ((product.price - product.discountPrice) / product.price) * 100
   );
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

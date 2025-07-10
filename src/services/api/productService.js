@@ -1,93 +1,327 @@
-import productsData from "@/services/mockData/products.json";
-
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const productService = {
   async getAll() {
-    await delay(300);
-    return [...productsData];
+    try {
+      await delay(300);
+      
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+      
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "discount_price" } },
+          { field: { Name: "images" } },
+          { field: { Name: "sizes" } },
+          { field: { Name: "colors" } },
+          { field: { Name: "category" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "review_count" } },
+          { field: { Name: "in_stock" } },
+          { field: { Name: "description" } }
+        ]
+      };
+      
+      const response = await apperClient.fetchRecords("product", params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return response.data || [];
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        console.error("Error fetching products:", error?.response?.data?.message);
+        throw new Error(error?.response?.data?.message);
+      } else {
+        console.error("Error fetching products:", error.message);
+        throw new Error(error.message);
+      }
+    }
   },
 
   async getById(id) {
-    await delay(200);
-    const product = productsData.find(p => p.Id === parseInt(id));
-    if (!product) {
-      throw new Error("Product not found");
+    try {
+      await delay(200);
+      
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+      
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "discount_price" } },
+          { field: { Name: "images" } },
+          { field: { Name: "sizes" } },
+          { field: { Name: "colors" } },
+          { field: { Name: "category" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "review_count" } },
+          { field: { Name: "in_stock" } },
+          { field: { Name: "description" } }
+        ]
+      };
+      
+      const response = await apperClient.getRecordById("product", parseInt(id), params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      if (!response.data) {
+        throw new Error("Product not found");
+      }
+      
+      // Transform field names to match UI expectations
+      const product = response.data;
+      return {
+        ...product,
+        name: product.Name,
+        discountPrice: product.discount_price,
+        reviewCount: product.review_count,
+        inStock: product.in_stock,
+        images: typeof product.images === 'string' ? product.images.split(',') : product.images,
+        sizes: typeof product.sizes === 'string' ? product.sizes.split(',') : product.sizes,
+        colors: typeof product.colors === 'string' ? product.colors.split(',') : product.colors
+      };
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        console.error(`Error fetching product with ID ${id}:`, error?.response?.data?.message);
+        throw new Error(error?.response?.data?.message);
+      } else {
+        console.error(`Error fetching product with ID ${id}:`, error.message);
+        throw new Error(error.message);
+      }
     }
-    return { ...product };
   },
 
   async getByCategory(category) {
-    await delay(350);
-    return productsData.filter(p => 
-      p.category.toLowerCase() === category.toLowerCase()
-    ).map(p => ({ ...p }));
+    try {
+      await delay(350);
+      
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+      
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "discount_price" } },
+          { field: { Name: "images" } },
+          { field: { Name: "category" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "review_count" } }
+        ],
+        where: [
+          {
+            FieldName: "category",
+            Operator: "EqualTo",
+            Values: [category]
+          }
+        ]
+      };
+      
+      const response = await apperClient.fetchRecords("product", params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return (response.data || []).map(p => ({
+        ...p,
+        name: p.Name,
+        discountPrice: p.discount_price,
+        reviewCount: p.review_count
+      }));
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        console.error("Error fetching products by category:", error?.response?.data?.message);
+        throw new Error(error?.response?.data?.message);
+      } else {
+        console.error("Error fetching products by category:", error.message);
+        throw new Error(error.message);
+      }
+    }
   },
 
   async searchProducts(query) {
-    await delay(250);
-    const lowercaseQuery = query.toLowerCase();
-    return productsData.filter(p => 
-      p.name.toLowerCase().includes(lowercaseQuery) ||
-      p.brand.toLowerCase().includes(lowercaseQuery) ||
-      p.category.toLowerCase().includes(lowercaseQuery)
-    ).map(p => ({ ...p }));
-  },
-
-  async filterProducts(filters) {
-    await delay(300);
-    let filtered = [...productsData];
-
-    if (filters.category && filters.category.length > 0) {
-      filtered = filtered.filter(p => filters.category.includes(p.category));
+    try {
+      await delay(250);
+      
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+      
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "discount_price" } },
+          { field: { Name: "images" } },
+          { field: { Name: "category" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "review_count" } }
+        ],
+        whereGroups: [
+          {
+            operator: "OR",
+            subGroups: [
+              {
+                conditions: [
+                  {
+                    fieldName: "Name",
+                    operator: "Contains",
+                    values: [query]
+                  }
+                ]
+              },
+              {
+                conditions: [
+                  {
+                    fieldName: "brand",
+                    operator: "Contains",
+                    values: [query]
+                  }
+                ]
+              },
+              {
+                conditions: [
+                  {
+                    fieldName: "category",
+                    operator: "Contains",
+                    values: [query]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+      
+      const response = await apperClient.fetchRecords("product", params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        throw new Error(response.message);
+      }
+      
+      return (response.data || []).map(p => ({
+        ...p,
+        name: p.Name,
+        discountPrice: p.discount_price,
+        reviewCount: p.review_count
+      }));
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        console.error("Error searching products:", error?.response?.data?.message);
+        throw new Error(error?.response?.data?.message);
+      } else {
+        console.error("Error searching products:", error.message);
+        throw new Error(error.message);
+      }
     }
-
-    if (filters.brand && filters.brand.length > 0) {
-      filtered = filtered.filter(p => filters.brand.includes(p.brand));
-    }
-
-    if (filters.priceRange) {
-      filtered = filtered.filter(p => 
-        p.discountPrice >= filters.priceRange.min && 
-        p.discountPrice <= filters.priceRange.max
-      );
-    }
-
-    if (filters.rating) {
-      filtered = filtered.filter(p => p.rating >= filters.rating);
-}
-
-    return filtered.map(p => ({ ...p }));
   },
 
   async getSimilarProducts(id) {
-    await delay(250);
-    const currentProduct = productsData.find(p => p.Id === parseInt(id));
-    if (!currentProduct) {
+    try {
+      await delay(250);
+      
+      // First get the current product to find similar ones
+      const currentProduct = await this.getById(id);
+      if (!currentProduct) {
+        return [];
+      }
+      
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+      
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "brand" } },
+          { field: { Name: "price" } },
+          { field: { Name: "discount_price" } },
+          { field: { Name: "images" } },
+          { field: { Name: "category" } },
+          { field: { Name: "rating" } },
+          { field: { Name: "review_count" } }
+        ],
+        whereGroups: [
+          {
+            operator: "AND",
+            subGroups: [
+              {
+                conditions: [
+                  {
+                    fieldName: "category",
+                    operator: "EqualTo",
+                    values: [currentProduct.category]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        orderBy: [
+          {
+            fieldName: "rating",
+            sorttype: "DESC"
+          }
+        ],
+        pagingInfo: {
+          limit: 5,
+          offset: 0
+        }
+      };
+      
+      const response = await apperClient.fetchRecords("product", params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        return [];
+      }
+      
+      // Filter out current product and limit to 4
+      return (response.data || [])
+        .filter(p => p.Id !== parseInt(id))
+        .slice(0, 4)
+        .map(p => ({
+          ...p,
+          name: p.Name,
+          discountPrice: p.discount_price,
+          reviewCount: p.review_count
+        }));
+    } catch (error) {
+      if (error?.response?.data?.message) {
+        console.error("Error fetching similar products:", error?.response?.data?.message);
+      } else {
+        console.error("Error fetching similar products:", error.message);
+      }
       return [];
     }
-
-    // Find products in the same category, excluding current product
-    let similar = productsData.filter(p => 
-      p.Id !== parseInt(id) && 
-      p.category === currentProduct.category
-    );
-
-    // If we have fewer than 4 products in same category, add products from same brand
-    if (similar.length < 4) {
-      const brandProducts = productsData.filter(p => 
-        p.Id !== parseInt(id) && 
-        p.brand === currentProduct.brand &&
-        !similar.find(sp => sp.Id === p.Id)
-      );
-      similar = [...similar, ...brandProducts];
-    }
-
-    // Sort by rating and limit to 4 products
-    similar = similar
-      .sort((a, b) => b.rating - a.rating)
-      .slice(0, 4);
-
-    return similar.map(p => ({ ...p }));
   }
 };
